@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class LeaderBoardComponent implements OnInit {
 
-  private userData;
+  private userData = null;
 
   constructor(private http: HttpClient) {
   }

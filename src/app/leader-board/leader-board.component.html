@@ -1,3 +1,6 @@
-<p>
-  leader-board works!
-</p>
+Leader Board
+<div *ngIf="userData != null">
+  <div *ngFor="let user of userData">
+    {{user.userName}} - {{user.points}}
+  </div>
+</div>
