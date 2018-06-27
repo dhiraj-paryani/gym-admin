@@ -1,10 +1,11 @@
 
-<div *ngIf="userData != null">
-    <table class="table table-striped table-dark">
-        <tr *ngFor="let item of userData">
-          <td style='width:20%'>{{item.userName}}</td>
-          <td class="textright"><span [class.onlinedot]="item.active"></span><span [class.offlinedot]="!item.active"></span></td>
-        </tr>
-      </table>
+<div class="container">
+<ul *ngIf="userData != null" class="nav">
+    <li class="nav-item" *ngFor="let item of userData">
+      <div>
+        {{item.userName}}
+        <span [class.onlinedot]="item.active"></span>
+      </div>
+    </li>
+  </ul>
 </div>
-
