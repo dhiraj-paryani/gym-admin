@@ -1,5 +1,10 @@
 .gym-background {
-  background: url("../assets/gym-background.jpg") no-repeat;
+  background-image: url("../assets/download.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
+  height: 100%;
+  width: 100%;
   z-index: -10;
 }
