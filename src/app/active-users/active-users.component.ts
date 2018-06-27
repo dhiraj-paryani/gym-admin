@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-active-users',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActiveUsersComponent implements OnInit {
 
-  constructor() { }
+ 
+  private userData = null;
 
-  ngOnInit() {
+  constructor(private http: HttpClient) {
   }
 
+  ngOnInit() {
+    this.http.get('http://gymificationcodeathon-env.8vvmhjujd2.ap-south-1.elasticbeanstalk.com/users/active').subscribe(data => {
+      this.userData = data;
+      console.log(data);
+    });
 }
+}
+

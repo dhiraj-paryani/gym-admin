@@ -1,0 +1,26 @@
+.offlinedot {
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+.onlinedot {
+    height: 10px;
+    width: 10px;
+    background-color: #42b72a;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.right{
+    float: right;
+}
+
+.textcenter{
+    text-align: center;
+}
+
+.textright{
+    text-align: right;
+}
