@@ -1,0 +1,5 @@
+.gym-background {
+  background: url("../assets/gym-background.jpg") no-repeat;
+  position: absolute;
+  z-index: -10;
+}
