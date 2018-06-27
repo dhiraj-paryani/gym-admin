@@ -10,6 +10,7 @@ export class ActiveUsersComponent implements OnInit {
 
  
   private userData = null;
+  private userPics = [];
 
   constructor(private http: HttpClient) {
   }
@@ -17,8 +18,14 @@ export class ActiveUsersComponent implements OnInit {
   ngOnInit() {
     this.http.get('http://gymificationcodeathon-env.8vvmhjujd2.ap-south-1.elasticbeanstalk.com/users/active').subscribe(data => {
       this.userData = data;
-      console.log(data);
-    });
-}
+    for(let user of this.userData) {
+      this.http.get             ('http://gymificationcodeathon-env.8vvmhjujd2.ap-south-1.elasticbeanstalk.com/image?userName=' + user.userName).subscribe(data => {
+      this.userPics.push(data);
+      });
+    }
+
+    console.log("Hello"+this.userData);
+  });
 }
 
+}

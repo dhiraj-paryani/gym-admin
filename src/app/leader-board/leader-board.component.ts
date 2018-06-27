@@ -9,7 +9,6 @@ import { HttpClient } from '@angular/common/http';
 export class LeaderBoardComponent implements OnInit {
 
   private userData = null;
-  private pic = null;
   constructor(private http: HttpClient) {
   }
 
@@ -18,13 +17,5 @@ export class LeaderBoardComponent implements OnInit {
       this.userData = data;
       console.log(data);
     });
-    //for(let user of this.userData)
-    {
-      this.http.get('http://gymificationcodeathon-env.8vvmhjujd2.ap-south-1.elasticbeanstalk.com/image?username=this.user.username').subscribe(data => {
-      this.pic = data;
-      console.log(data);
-    });
-    }
-    
-  }
+  }    
 }

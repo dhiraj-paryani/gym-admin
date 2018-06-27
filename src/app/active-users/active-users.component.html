@@ -1,10 +1,10 @@
 
 <div class="container">
 <ul *ngIf="userData != null" class="nav">
-    <li class="nav-item" *ngFor="let item of userData">
+    <li class="nav-item" *ngFor="let item of userData, let i = index">
       <div>
-        {{item.userName}}
-        <span [class.onlinedot]="item.active"></span>
+        <img src={{userPics[i]}}>
+        {{item.userName}}<span [class.onlinedot]="item.active"></span>
       </div>
     </li>
   </ul>
