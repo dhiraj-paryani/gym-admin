@@ -7,7 +7,6 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { ActiveUsersComponent } from './active-users/active-users.component';
 import { LeaderBoardComponent } from './leader-board/leader-board.component';
-import { RandomPipe } from './random.pipe';
 
 
 @NgModule({

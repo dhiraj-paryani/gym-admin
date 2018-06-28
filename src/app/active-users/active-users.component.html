@@ -1,11 +1,14 @@
-
-<div class="container">
-<ul *ngIf="userData != null" class="nav">
-    <li class="nav-item" *ngFor="let item of userData, let i = index">
-      <div >
-        <img src="../assets/characters/char_male_basic.png}"  width="120" height="150">
-        <br>{{item.userName}}&nbsp;<span [class.onlinedot]="item.active"></span>
-      </div>
-    </li>
-  </ul>
+<div *ngIf = "userData != null">
+<table class="table table-striped table-dark">
+  <thead>
+  <tr>
+    <th *ngFor="let item of userData, let i = index">
+      <img src={{item.userImageURL}}  width="120" height="150">
+      <br>{{item.userName}}&nbsp;<span [class.onlinedot]="item.active"></span>
+      <br>{{item.points}}&nbsp;
+    </th>
+  </tr>
+  </thead>
+</table>
 </div>
+<div *ngIf = "userData == null">No active users</div>

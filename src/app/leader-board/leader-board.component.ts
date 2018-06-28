@@ -13,9 +13,14 @@ export class LeaderBoardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.http.get('http://gymificationcodeathon-env.8vvmhjujd2.ap-south-1.elasticbeanstalk.com/users?sort=points,desc&page=0&size=5').subscribe(data => {
-      this.userData = data;
-      console.log(data);
-    });
-  }    
+    this.callBackEnd();
+    setInterval(() => {this.callBackEnd(); }, 3000);
+  }
+
+  callBackEnd() {
+    this.http.get('http://gymificationcodeathon-env.8vvmhjujd2.ap-south-1.elasticbeanstalk.com/users?sort=points,desc&page=0&size=5')
+      .subscribe(data => {
+        this.userData = data;
+      });
+  }
 }
