@@ -2,9 +2,9 @@
 <div class="container">
 <ul *ngIf="userData != null" class="nav">
     <li class="nav-item" *ngFor="let item of userData, let i = index">
-      <div>
-        <img src={{userPics[i]}}>
-        {{item.userName}}<span [class.onlinedot]="item.active"></span>
+      <div >
+        <img src="../assets/characters/char_male_basic.png}"  width="120" height="150">
+        <br>{{item.userName}}&nbsp;<span [class.onlinedot]="item.active"></span>
       </div>
     </li>
   </ul>
