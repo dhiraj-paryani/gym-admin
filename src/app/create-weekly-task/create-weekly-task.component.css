@@ -1,9 +1,9 @@
 .weekly-form {
   margin: auto;
   width: 50%;
-  border: 3px solid lightgray;
+  border: 3px solid darkgray;
   padding: 50px;
-  background-color: #E1E1E1;
+  background-color: gray;
 }
 
 .form-group {
@@ -14,4 +14,9 @@
   position: fixed;
   bottom: 0;
   right: 0;
+}
+
+.submit-button {
+  align-content: right;
+  float: right;
 }
